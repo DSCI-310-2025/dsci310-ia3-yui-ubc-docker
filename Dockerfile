@@ -29,6 +29,9 @@ FROM rocker/rstudio:4.4.2
 # Install renv
 RUN Rscript -e "install.packages('renv', repos = 'https://cloud.r-project.org')"
 
+# Install ggplot2
+RUN Rscript -e "install.packages('ggplot2', version = '3.4.0', repos = 'https://cloud.r-project.org')"
+
 # Copy the whole project directory (assuming renv.lock is inside)
 COPY . /home/rstudio/project
 
