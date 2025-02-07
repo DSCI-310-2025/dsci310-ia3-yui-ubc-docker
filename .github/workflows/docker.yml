@@ -30,7 +30,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: yuimikuriya/dsci310-dockerfile-practice
+          images: yuimikuriya/dsci310-ia3-yui-ubc-docker
           tags: |
             type=raw, value={{sha}},enable=${{github.ref_type != 'tag' }}
             type=raw, value=latest
